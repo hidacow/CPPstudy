@@ -1,12 +1,12 @@
 #include<iostream>
-#include<cmath>
 using namespace std;
-int num;
-void fxxk(int a,int n){
-    for(int i=a;i<sqrt(n);i++){
+int num;//set global, need to use in the function
+
+void fact(int a,int n){
+    for(int i=a;i<n;i++){
         if(n%i==0 && i<=n/i){
             num++;
-            fxxk(i,n/i);
+            fact(i,n/i);
         }
         if(i>n/i)break;
     }
@@ -21,7 +21,7 @@ int main(){
     for(long i=1;i<=n;i++){
         cin>>a;
         num=1;
-        fxxk(2,a);
+        fact(2,a);
         cout<<num<<endl;
     }
 }
