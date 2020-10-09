@@ -28,7 +28,7 @@ long getmonthdays(long y,long m){//Get how may days are there in a month
 }
 
 
-long getDays(long y, long m)    //date difference y.m.1 between 1589.1.1
+long getDays(long y, long m)    //date difference between y.m.1 and 1589.1.1
 {
    int i;
    long sum=0;
