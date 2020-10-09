@@ -1,33 +1,37 @@
 #include<iostream>
 #include<cmath>
-#include<algorithm>
-#include<string>
+
+//expected CPU time >970ms
 using namespace std;
 
-bool isprime(long n){
+bool isprime(int n){
     bool prime=true;
-    for(int i=2;i<=sqrt(n);i++){
+    for(int i=3;i<=sqrt(n);i+=2){//already excluded i%2==0
         if(n%i==0){
             prime=false;
             break;
         }
     }
-    if(n==2)prime=true;
     return prime;
 }
 
-bool ispalindromic(long n){
-    string str;
-    str=to_string(n);
-    reverse(str.begin(),str.end());
-    if(str==to_string(n))return true;
-    else return false;
+bool isPalindrome(int n) {//use overflow to judge palindrome numbers, copied from network
+        if(n<0|| (n!=0 && n%10==0)) return false;
+        int sum=0;
+        while(n>sum)
+        {
+            sum = sum*10+n%10;
+            n=n/10;
+        }
+        return (n==sum)||(n==sum/10);
 }
 
 int main(){
-    long a,b;
+    int a,b;
     cin>>a>>b;
-    for(long i=a;i<=b;i+=){
+    for(int i=a;i<=b;i++){
+        if(i%2==0)continue;//must be put here
+        if(!isPalindrome(i))continue;
         if(isprime(i))cout<<i<<endl;
     }
 }
