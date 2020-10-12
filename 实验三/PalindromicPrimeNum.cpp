@@ -31,7 +31,7 @@ int main(){
     cin>>a>>b;
     for(int i=a;i<=b;i++){
         if(i%2==0)continue;//must be put here
-        //if(i>9989900)continue; //CHEAT! no data points satisfying the question beyond 9989900
+        //if(i>=9989900)continue; //CHEAT! no data points satisfying the question beyond 9989900
         if(!isPalindrome(i))continue;
         if(isprime(i))cout<<i<<endl;
     }
