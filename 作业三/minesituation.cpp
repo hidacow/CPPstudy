@@ -31,19 +31,19 @@ void endinputline(){
 int getnearbymines(int indexn){
     int minecnt=0;
     /*
-                            ¨I¡ü¨J
-    Detect nearby 9 squares ¡û¡¤¡ú
-                            ¨L¡ý¨K
+                            â†–â†‘â†—
+    Detect nearby 9 squares â†Â·â†’
+                            â†™â†“â†˜
     */
-    if((indexn-matrixcolumn)>=1)minecnt+=mine[indexn-matrixcolumn];//¡ü
-    if((indexn+matrixcolumn)<=lines*matrixcolumn)minecnt+=mine[indexn+matrixcolumn];//¡ý
-    if((indexn%matrixcolumn)!=1)minecnt+=mine[indexn-1];//¡û
-    if((indexn%matrixcolumn)!=0)minecnt+=mine[indexn+1];//¡ú
-    if(((indexn-matrixcolumn)>=1)&&((indexn%matrixcolumn)!=1))minecnt+=mine[indexn-matrixcolumn-1];//¨I
-    if(((indexn-matrixcolumn)>=1)&&((indexn%matrixcolumn)!=0))minecnt+=mine[indexn-matrixcolumn+1];//¨J
-    if(((indexn+matrixcolumn)<=lines*matrixcolumn)&&((indexn%matrixcolumn)!=1))minecnt+=mine[indexn+matrixcolumn-1];//¨L
-    if(((indexn+matrixcolumn)<=lines*matrixcolumn)&&((indexn%matrixcolumn)!=0))minecnt+=mine[indexn+matrixcolumn+1];//¨K
-    return minecnt+mine[indexn];//¡¤
+    if((indexn-matrixcolumn)>=1)minecnt+=mine[indexn-matrixcolumn];//â†‘
+    if((indexn+matrixcolumn)<=lines*matrixcolumn)minecnt+=mine[indexn+matrixcolumn];//â†“
+    if((indexn%matrixcolumn)!=1)minecnt+=mine[indexn-1];//â†
+    if((indexn%matrixcolumn)!=0)minecnt+=mine[indexn+1];//â†’
+    if(((indexn-matrixcolumn)>=1)&&((indexn%matrixcolumn)!=1))minecnt+=mine[indexn-matrixcolumn-1];//â†–
+    if(((indexn-matrixcolumn)>=1)&&((indexn%matrixcolumn)!=0))minecnt+=mine[indexn-matrixcolumn+1];//â†—
+    if(((indexn+matrixcolumn)<=lines*matrixcolumn)&&((indexn%matrixcolumn)!=1))minecnt+=mine[indexn+matrixcolumn-1];//â†™
+    if(((indexn+matrixcolumn)<=lines*matrixcolumn)&&((indexn%matrixcolumn)!=0))minecnt+=mine[indexn+matrixcolumn+1];//â†˜
+    return minecnt+mine[indexn];//Â·
 }
 
 
