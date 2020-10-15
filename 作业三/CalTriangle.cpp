@@ -2,14 +2,16 @@
 #include<cmath>
 using namespace std;
 
+
+
+double CalCircumference(double a,double b,double c){
+    return a+b+c;
+}
+
 double CalSize(double a,double b,double c){
     double p;
     p=(a+b+c)/2;
     return sqrt(p*(p-a)*(p-b)*(p-c));
-}
-
-double CalCircumference(double a,double b,double c){
-    return a+b+c;
 }
 
 bool isTriangle(double a,double b,double c){
