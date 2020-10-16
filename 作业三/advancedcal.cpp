@@ -2,6 +2,8 @@
 #include<string>
 #include<algorithm>
 
+//NOTICE:This cannot AC!
+
 using namespace std;
 string a,b;
 int k;

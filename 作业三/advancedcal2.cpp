@@ -2,6 +2,10 @@
 #include<cmath>
 #include<memory.h>
 #include<string.h>
+
+//Using FFT to calculate
+//Cannot compile in VS2019
+
 using namespace std;
 typedef long long ll;
 typedef double db;

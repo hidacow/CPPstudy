@@ -9,11 +9,11 @@ int main() {
     char ch;
     int flag = 0;
     while (cin >> num) {
-        a.push_back(num);
-        ch = getchar();
-        if (ch == '\n' || ch == EOF) {
-            flag++;
-            if (flag == 2) {
+        a.push_back(num);   //put it into the array
+        ch = getchar(); //get the input char
+        if (ch == '\n' || ch == EOF) {//detect end of input
+            flag++; //when entered "ENTER",count it
+            if (flag == 2) {    //sort when entered two lines of array
                 cout << "Case " << ++cnt << ":";
                 sort(a.begin(), a.end());
                 for (int j = 0; j < a.size(); j++) {
