@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int situation[101][101];
+int situation[103][103];
 int lines = 1, column, cnt;
 int matrixcolumn;
 bool flag = false;
@@ -12,10 +12,10 @@ bool flag = false;
 void printsituation() {
     cout << "Case " << ++cnt << ":" << endl;
     for (int i = 1; i <= lines - 1; i++) {
-        for (int j = 1; j <= matrixcolumn; j++) {
+        for (int j = 1; j < matrixcolumn; j++) {
             cout << situation[i][j] << " ";
-            if (j == matrixcolumn)cout << "\b\n";
         }
+        cout<<situation[i][matrixcolumn]<<endl;//if use /b/n cannot AC
     }
 }
 
@@ -37,8 +37,8 @@ void endsituation() {
     flag = false;
 
     printsituation();
-    for (int i = 0; i <= 100; i++) {
-        for (int j = 0; j <= 100; j++) {
+    for (int i = 0; i <= 102; i++) {
+        for (int j = 0; j <= 102; j++) {
             situation[i][j]=0;
         }
     }
@@ -70,13 +70,17 @@ void inputmine(int inputm) {
 
 int main() {
     char inputc;
-    int i, j;
-    while (inputc = cin.get()) {
-        if(inputc==' ')continue;
+    while (1) {
+        inputc = getchar();
+        if (inputc == ' ')continue;
         switch (inputc) {
         case '\n':
             if (!flag)endinputline();
             else endsituation();
+            break;
+        case EOF:
+            printsituation();
+            return 0;
             break;
         case '0':
             inputmine(0);
@@ -84,9 +88,7 @@ int main() {
         case '1':
             inputmine(1);
             break;
-        default:
-            return 0;
-            break;
         }
     }
 }
+

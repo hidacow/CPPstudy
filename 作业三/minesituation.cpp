@@ -69,24 +69,26 @@ void inputmine(int inputm){
 
 
 
-int main(){
+int main() {
     char inputc;
-    int i,j;
-    while(inputc=cin.get()){
-        switch(inputc){
-            case '\n':
-                if(!flag)endinputline();
-                else endsituation();
-                break;
-            case '0':
-                inputmine(0);
-                break;
-            case '1':
-                inputmine(1);
-                break;
-            default:
-                flag=false;
-                break;
+    while (1) {
+        inputc = getchar();
+        if (inputc == ' ')continue;
+        switch (inputc) {
+        case '\n':
+            if (!flag)endinputline();
+            else endsituation();
+            break;
+        case EOF:
+            endsituation();
+            return 0;
+            break;
+        case '0':
+            inputmine(0);
+            break;
+        case '1':
+            inputmine(1);
+            break;
         }
     }
 }

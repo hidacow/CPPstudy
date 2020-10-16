@@ -3,26 +3,27 @@
 #include<vector>
 using namespace std;
 
-
-int main(){
-    int n,cnt;
-    vector<int>a;
-    bool flag;
-    while(cin>>n){
-        a.push_back(n);
-        if (cin.get()=='\n'){
-            if(flag==true){
-                sort(a.begin(),a.end());
-                cout<<"Case "<<++cnt<<": ";
-                for(vector<int>::iterator it=a.begin(); it!=a.end(); it++){
-                    cout<<*it<<" ";
+int main() {
+    vector<int> a;
+    int num,cnt=0;
+    char ch;
+    int flag = 0;
+    while (cin >> num) {
+        a.push_back(num);
+        ch = getchar();
+        if (ch == '\n' || ch == EOF) {
+            flag++;
+            if (flag == 2) {
+                cout << "Case " << ++cnt << ":";
+                sort(a.begin(), a.end());
+                for (int j = 0; j < a.size(); j++) {
+                    cout << " " << a[j];
                 }
-                cout<<"\b\n";
+                cout << endl;
                 a.clear();
-                flag=false;
-            }else flag=true;
+                flag = 0;
+            }
+
         }
-
-
     }
 }
