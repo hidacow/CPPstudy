@@ -2,11 +2,9 @@
 #include<cmath>
 #include<memory.h>
 #include<string.h>
-
-//Using FFT to calculate
-//Cannot compile in VS2019
-
 using namespace std;
+//using FFT method to calculate
+//Cannot compile in VS2019
 typedef long long ll;
 typedef double db;
 const int N=1e5+10,inf=0x3f3f3f3f;
