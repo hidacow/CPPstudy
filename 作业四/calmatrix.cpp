@@ -29,7 +29,7 @@ int main(){
     float num;
     while(getline(cin,str)){    //get the whole line and put it into a string
         if(str.length()==0){endsituation();continue;}   //if entered nothing then end the situation
-        istringstream inputstr(str);    //difine a string stream, similar to istream(inputstream,eg.cin)
+        istringstream inputstr(str);    //define a string stream, similar to istream(inputstream,eg.cin)
         while(inputstr>>num){   //get matrix elements from the sstream
             sum+=num;   //add to sum
             column++;
