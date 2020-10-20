@@ -3,8 +3,6 @@
 using namespace std;
 
 void printmatrix(int n) {
-    if (n == 1) { cout << "1" << endl; return; }    //get rid of n=1
-    if (n == 2) { cout << "1 1" << endl << "1 1" << endl; return; } //get rid of n=2
     vector<vector<int>> mat(52, vector<int>(52));//define a vector
     int i, j;
     for (i = 1; i <= n; i++)
