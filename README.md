@@ -2,7 +2,7 @@
   Author: hidacow
   
 ## Introduction
-  Personal answer key for the CES C++ 2020ALP course
+  Personal answer for the 2020 CES C++ ALP course
 
   This repo is intended for studying purposes
 
@@ -16,7 +16,7 @@
 
 ### How to test my program locally?
 
-  1. First change directory to your program output folder:
+  1. First open cmd and change directory to your program output folder:
 
      `cd C:\XXX\C++\XXX\`
 
@@ -47,7 +47,7 @@
 ## Contribute
 You can contact 20122971 for suggestions
 
-> You can search my Id in QQgroups, etc. and find my QQ
+> You can search my StuNo. in QQgroups, etc. and find my QQ
 
 Creating Issues and Pull requests are welcomed! :)
 
