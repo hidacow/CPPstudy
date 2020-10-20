@@ -5,6 +5,8 @@ using namespace std;
 
 
 //Another Version
+//NOTICE: calmatrix.cpp is a better, easier-to-understand version
+
 int main(){
     string str;
     int lines,columns,cnt=0;

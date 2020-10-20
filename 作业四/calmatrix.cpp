@@ -18,7 +18,7 @@ void endsituation() {
 }
 
 void endinputline() {
-    matrixcolumn = column;
+    matrixcolumn = column;  //backup matrix column
     column = 0;
     lines++;
 
@@ -29,9 +29,9 @@ int main(){
     float num;
     while(getline(cin,str)){    //get the whole line and put it into a string
         if(str.length()==0){endsituation();continue;}   //if entered nothing then end the situation
-        istringstream inputstr(str);
-        while(inputstr>>num){
-            sum+=num;
+        istringstream inputstr(str);    //difine a string stream, similar to istream(inputstream,eg.cin)
+        while(inputstr>>num){   //get matrix elements from the sstream
+            sum+=num;   //add to sum
             column++;
         }
         endinputline();
