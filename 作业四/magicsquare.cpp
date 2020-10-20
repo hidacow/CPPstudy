@@ -3,12 +3,12 @@
 using namespace std;
 
 void printmatrix(int n) {
-    if (n == 1) { cout << "1" << endl; return; }
+    if (n == 1) { cout << "1" << endl; return; }//get rid of n=1
     vector<vector<int>> mat(n + 1, vector<int>(n + 1));
     mat[1][n / 2 + 1] = 1;
     int i = 2, j, q = n / 2 + 1, p = 1;
-    while (i <= n * n) {
-        if (i % n == 1) {
+    while (i <= n * n) {    //need to loop n*n times
+        if (i % n == 1) { 
             if (p + 1 > n)p = 1;
             else p++;
         }
@@ -21,7 +21,7 @@ void printmatrix(int n) {
         mat[p][q] = i;
         i++;
     }
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++) {//print the matrix
         for (j = 1; j < n; j++) {
             cout << mat[i][j] << " ";
         }
