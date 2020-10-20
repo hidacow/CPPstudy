@@ -13,7 +13,7 @@ double C(int n,int m){
 int main(){
     int m,n,cnt=1;
     while(cin>>m>>n){
-        cout<<"Case "<<cnt++<<":"<<endl<<fixed<<setprecision(0)<<C(m,n)<<endl;
+        cout<<"Case "<<cnt++<<":"<<endl<<fixed<<setprecision(0)<<C(m,n)<<endl;  //need to format output
 
     }
 }

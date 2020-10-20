@@ -27,8 +27,8 @@ void endinputline() {
 int main(){
     string str;
     float num;
-    while(getline(cin,str)){
-        if(str.length()==0){endsituation();continue;}
+    while(getline(cin,str)){    //get the whole line and put it into a string
+        if(str.length()==0){endsituation();continue;}   //if entered nothing then end the situation
         istringstream inputstr(str);
         while(inputstr>>num){
             sum+=num;
@@ -36,6 +36,6 @@ int main(){
         }
         endinputline();
     }
-    endsituation();
+    endsituation(); //handle EOF, need to end the situation
 
 }

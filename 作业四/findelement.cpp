@@ -18,11 +18,11 @@ int main() {
                 int upper = a.size() - 1, lower = 0;
                 while (a[i] != target) {
                     if (a[i] > target) {
-                        if (upper == i)break;   //end of loop if cannot find element
+                        if (upper == i)break;   //end loop if cannot find element
                         upper = i;
                     }
                     else if (a[i] < target) {
-                        if (lower == i)break;   //end of loop if cannot find element
+                        if (lower == i)break;   //end loop if cannot find element
                         lower = i;
                     }
                     else {

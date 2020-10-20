@@ -3,6 +3,8 @@
 #include<sstream>
 using namespace std;
 
+
+//Another Version
 int main(){
     string str;
     int lines,columns,cnt=0;
