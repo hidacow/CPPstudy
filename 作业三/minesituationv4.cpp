@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 using namespace std;
 
@@ -53,15 +53,15 @@ void inputmine(int inputm) {
     flag = false;
     ++column;
     if (inputm==0)return;
-    situation[lines][column]++;//±¾Éí
-    situation[lines-1][column]++;//ÉÏ
-    situation[lines+1][column]++;//ÏÂ
-    situation[lines][column-1]++;//×ó
-    situation[lines][column+1]++;//ÓÒ
-    situation[lines-1][column-1]++;//×óÉÏ
-    situation[lines+1][column-1]++;//×óÏÂ
-    situation[lines-1][column+1]++;//ÓÒÉÏ
-    situation[lines+1][column+1]++;//ÓÒÏÂ
+    situation[lines][column]++;//æœ¬èº«
+    situation[lines-1][column]++;//ä¸Š
+    situation[lines+1][column]++;//ä¸‹
+    situation[lines][column-1]++;//å·¦
+    situation[lines][column+1]++;//å³
+    situation[lines-1][column-1]++;//å·¦ä¸Š
+    situation[lines+1][column-1]++;//å·¦ä¸‹
+    situation[lines-1][column+1]++;//å³ä¸Š
+    situation[lines+1][column+1]++;//å³ä¸‹
 
 }
 
