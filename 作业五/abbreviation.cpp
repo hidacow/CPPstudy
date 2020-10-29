@@ -21,7 +21,7 @@ string Abbreviate(string str) {
         {
             if ((wordlist[i][0] == 'a' || wordlist[i][0] == 'A') && (wordlist[i][1] == 'n' || wordlist[i][1] == 'N'))
                 continue;   //skip"an"
-            if ((wordlist[i][0] == 'o' || wordlist[i][0] == 'O') || (wordlist[i][1] == 'f' || wordlist[i][1] == 'F'))
+            if ((wordlist[i][0] == 'o' || wordlist[i][0] == 'O') && (wordlist[i][1] == 'f' || wordlist[i][1] == 'F'))
                 continue;   //skip"of"
         }
         if (wordlist[i].length() == 3)
